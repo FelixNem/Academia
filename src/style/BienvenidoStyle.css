@@ -1,0 +1,38 @@
+
+.bienvenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    height: 100vh;
+    padding: 25px;
+
+    background-image: url('../assets/img/home.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.escuela {
+    padding: 20px;
+    width: 50%;
+    height: 80%;
+}
+
+.nombre {
+    font-size: 3.5rem;
+}
+.bold {
+    color: chocolate;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 50%;
+}

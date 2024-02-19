@@ -1,0 +1,14 @@
+.carruselCard {
+    display:  flex;
+    flex-direction: column;
+    width: 30%;
+    height: 85%;
+
+    padding: 15px;
+    background-color: beige;
+}
+
+.carruselCard img {
+    height: 35%;
+    width: 100%;
+}
