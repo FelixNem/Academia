@@ -6,7 +6,7 @@ export const CarruselItem = ({
     img, curso, desc
 }) => {
   return (
-    <div className='carruselCard'>
+    <div className='bCurso card'>
         <img src={`${img}`} alt='imagen del curso' />
 
         <h2>{ curso }</h2>

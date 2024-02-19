@@ -17,7 +17,7 @@ export const Bienvenido = () => {
 
   return (
     <section className='bienvenido'>
-      {/* <div className='escuela' >
+      <div className='escuela' >
         <h1 className='nombre' >Academia<br/><span className='bold' >De Habilidades</span></h1>
         <p>Somos más que una escuela; somos una comunidad apasionada comprometida con el crecimiento y desarrollo de habilidades diversas para todas las edades</p>
         <button>
@@ -27,7 +27,7 @@ export const Bienvenido = () => {
       
       <div className='carrusel'>
         <CarruselItem img={ curso.img } curso={ curso.nombre } desc={ curso.desc } />
-      </div> */}
+      </div>
 
     </section>
   )

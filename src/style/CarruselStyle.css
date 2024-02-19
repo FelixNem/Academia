@@ -1,14 +1,38 @@
-.carruselCard {
-    display:  flex;
+.card {
+    display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 85%;
-
+    align-items: center;
+    width: 25%;
     padding: 15px;
-    background-color: beige;
+    border-radius: 7%;
+    text-align: center;
+
+    background-color: #864AF9;
+
 }
 
-.carruselCard img {
-    height: 35%;
-    width: 100%;
+.card img {
+    width: 250px;
+    height: 250px;
 }
+
+.card h2 {
+    margin-bottom: 0;
+}
+.card button {
+    margin: 17px;
+}
+
+.bCurso {
+    width: 40%;
+}
+
+/* Carrusel de Cursos */
+.carruselCards {
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
