@@ -17,10 +17,11 @@ export const Bienvenido = () => {
 
   return (
     <section className='bienvenido'>
+      <div className='' ></div>
       <div className='escuela' >
         <h1 className='nombre' >Academia<br/><span className='bold' >De Habilidades</span></h1>
         <p>Somos más que una escuela; somos una comunidad apasionada comprometida con el crecimiento y desarrollo de habilidades diversas para todas las edades</p>
-        <button>
+        <button className='btn btn-primary'>
           Más información
         </button>
       </div>

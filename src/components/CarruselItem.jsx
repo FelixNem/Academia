@@ -13,7 +13,7 @@ export const CarruselItem = ({
 
         <p>{ desc }</p>
 
-        <button>
+        <button className='btn btn-primary' >
             Saber Más
         </button>
     </div>

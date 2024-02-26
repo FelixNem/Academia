@@ -4,10 +4,15 @@
 
     padding: 40px;
 
-    height: 90vh;
+    height: 100vh;
+
+    background-image: url('https://observatorio.tec.mx/wp-content/uploads/2022/05/bigstock-Top-View-Of-Young-Students-Wit-204873577.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 .mensaje{
     font-size: 1.2rem;
+    color: white;
 }

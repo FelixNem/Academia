@@ -8,7 +8,7 @@ export const CarruselCard = ({img, curso, desc}) => {
       <h2>{ curso }</h2>
       <p>{ desc }</p>
       <img src={`${img}`} alt='imagen del curso' />
-      <button>
+      <button className='btn btn-primary' >
           Saber Más
       </button>
     </div>
