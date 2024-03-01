@@ -7,7 +7,7 @@
     align-items: center;
 
 
-    height: 100vh;
+    height: 110vh;
     padding: 25px;
 
     background-image: url('https://www.telemundo.com/sites/nbcutelemundo/files/images/promo/article/2016/08/16/estudiante-universitaria-con-smartphone-en-biblioteca.jpg');
@@ -16,10 +16,14 @@
 
 }
 
-/* .wrap {
+.img-facebook {
     height: 100vh;
-    background-color: blue;
-} */
+}
+
+.img-facebook img {
+    height: auto;
+    width: 100%;
+}
 
 .escuela {
     padding: 20px;

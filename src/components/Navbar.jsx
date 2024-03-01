@@ -5,7 +5,7 @@ import '../style/NavbarStyle.css'
 
 export const Navbar = () => {
     return (
-		<nav className='navbar navbar-expand-sm navbar-dark bg-dark p-2'>
+		<nav className='navbar navbar-expand-sm navbar-dark bg-dark p-2 contenedor-header'>
 			<Link className='navbar-brand' to='/'>
 				Academia de Habiliadades
 			</Link>
@@ -28,6 +28,15 @@ export const Navbar = () => {
 						to='/cursos'
 					>
 						Cursos
+					</NavLink>
+
+					<NavLink
+						className={({ isActive }) =>
+							`nav-item nav-link ${isActive ? 'active' : ''}`
+						}
+						to='/vacante'
+					>
+						Vacantes
 					</NavLink>
 
 					<NavLink

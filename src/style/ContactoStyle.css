@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 75px;
     height: 90vh;
 }
 
 .container {
-    width: 85%;
+    width: 70%;
     height: 75%;
 
     display: flex;
@@ -45,10 +46,29 @@
 }
 
 .formulario form {
-   width: 75%;
+   width: 85%;
 }
 
 .redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
     width: 40%;
     height: 100%;
+    margin-left: 35px;
 }
+
+.cajaRed {
+    font-size: 18px;
+}
+
+/*Este bloque evita que los botones de las redes sociales con redireccion cambien de color */
+.cajaRed a:link, a:visited, a:active {
+    color: white
+}
+
+.nombreRed {
+ margin-left: 7px;
+}
+
