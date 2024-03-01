@@ -1,5 +1,3 @@
-import { Carrusel } from '../components/Carrusel'
-
 import '../style/CursosStyle.css'
 
 export const Cursos = () => {
@@ -15,7 +13,6 @@ export const Cursos = () => {
         </p>
       </div>
 
-      <Carrusel />
     </section>
   )
 }

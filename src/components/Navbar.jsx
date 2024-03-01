@@ -1,24 +1,53 @@
-import React from 'react'
+
+import { Link, NavLink } from 'react-router-dom';
 
 import '../style/NavbarStyle.css'
 
 export const Navbar = () => {
-    const img = 'https://png.pngtree.com/png-clipart/20230801/original/pngtree-ancient-opened-book-knowledge-ancient-empty-vector-picture-image_9215430.png'
+    return (
+		<nav className='navbar navbar-expand-sm navbar-dark bg-dark p-2'>
+			<Link className='navbar-brand' to='/'>
+				Academia de Habiliadades
+			</Link>
 
-  return (
-    <div className='contenedor-header' >
-        <header >
-            <div className="logo">
-                <a href="#"><img src={img} alt="Bootstrap" width="30" height="24" /></a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">Bienvenido</a></li>
-                    <li><a href="#cursos" onclick="seleccionar()">Cursos</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-  )
+			<div className='navbar-collapse'>
+				<div className='navbar-nav'>
+					<NavLink
+						className={({ isActive }) =>
+							`nav-item nav-link ${isActive ? 'active' : ''}`
+						}
+						to='/'
+					>
+						Bienvenido
+					</NavLink>
+
+					<NavLink
+						className={({ isActive }) =>
+							`nav-item nav-link ${isActive ? 'active' : ''}`
+						}
+						to='/cursos'
+					>
+						Cursos
+					</NavLink>
+
+					<NavLink
+						className={({ isActive }) =>
+							`nav-item nav-link ${isActive ? 'active' : ''}`
+						}
+						to='/contacto'
+					>
+						Contacto
+					</NavLink>
+				</div>
+			</div>
+
+			{/* <div className='navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end'>
+				<ul className='navbar-nav ml-auto'>
+					<button className='nav-item nav-link btn' onClick={}>
+						/*** aqui va una imagen
+					</button>
+				</ul>
+			</div> */}
+		</nav>
+	);
 }
