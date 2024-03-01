@@ -1,120 +1,35 @@
-.card {
+/* Carrusel de Cursos */
+.cursosCarrusel {
+    height: 68%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cursoCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-    padding: 15px;
-    border-radius: 7%;
+    padding: 10px;
+    width: 30%;
+    background-color: aliceblue;
     text-align: center;
-
-    background-color: #864AF9;
-
+    border-radius: 15%;
 }
 
-.card img {
-    width: 250px;
-    height: 250px;
+.cursoCard h2 {
+    margin-bottom: 15px;
 }
 
-.card h2 {
-    margin-bottom: 0;
-}
-.card button {
-    margin: 17px;
+.cursoCard img {
+    width: 60%;
+    height: 50%;
 }
 
-.bCurso {
+.cursoCard button {
+    font-size: 1.2rem;
+    padding: 7px;
+    margin-top: 15px;
     width: 40%;
 }
-
-/* Carrusel de Cursos */
-.carruselCards {
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-ul,
-li {
-  list-style: none;
-  white-space: nowrap;
-}
-
-li {
-  display: inline;
-}
-
-img {
-  margin-top: -16px;
-}
-
-/* Main container */
-
-.main-container {
-  width: 500px;
-  height: 280px;
-  margin: 0 auto;
-}
-
-/* Slider container */
-.slider-container {
-  position: relative;
-  height: 100%
-}
-
-/* dots carrusel */
-.dots-container {
-  display: flex;
-  justify-content: center;
-}
-
-.dot-container-item {
-  margin: 8px 3px;
-  cursor: pointer;
-  font-size: 12px;
-  text-align: center;
-}
-
-/* Arrows */
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.container-images {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  border: 1px solid #eee;
-  overflow: hidden;
-}
-
-div.active {
-  background: #ccc;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-

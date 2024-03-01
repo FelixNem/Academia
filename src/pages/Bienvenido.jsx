@@ -1,11 +1,12 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-import { CarruselItem } from '../components';
+import { CarruselItemHome } from '../components';
 
 import facebook from '../assets/img/img_face_academia.jpeg'
 import '../style/BienvenidoStyle.css'
 
 export const Bienvenido = () => {
+  const navigate = useNavigate();
   const curso = {
     img: 'https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f1fa-1f1f8.png',
     nombre: 'INGLES',
@@ -13,7 +14,10 @@ export const Bienvenido = () => {
 
   }
 
-
+  const onClick = () => {
+    navigate('cursos');
+  }
+  
   return (
     <section>
       <div className='bienvenido' >
@@ -21,13 +25,13 @@ export const Bienvenido = () => {
       <div className='escuela' >
         <h1 className='nombre' >Academia<br/><span className='bold' >De Habilidades</span></h1>
         <p>Somos más que una escuela; somos una comunidad apasionada comprometida con el crecimiento y desarrollo de habilidades diversas para todas las edades</p>
-        <button className='btn btn-primary'>
+        <button className='btn btn-primary' onClick={onClick} >
           Más información
         </button>
       </div>
       
-      <div className='carrusel'>
-        <CarruselItem img={ curso.img } curso={ curso.nombre } desc={ curso.desc } />
+      <div className='carruselHome'>
+        <CarruselItemHome img={ curso.img } curso={ curso.nombre } desc={ curso.desc } />
       </div>
       </div>
 

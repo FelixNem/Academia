@@ -40,10 +40,35 @@
     color: gold;
 }
 
-.carrusel {
+/*Carusel y tajertas de inicio*/
+/* Slim Cards */
+.carruselHome {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80%;
     width: 50%;
+}
+
+.cardHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 43%;
+    padding: 15px;
+    border-radius: 7%;
+    text-align: center;
+    background-color: #864AF9;
+}
+
+.cardHome img {
+    width: 250px;
+    height: 250px;
+}
+
+.cardHome h2 {
+    margin-bottom: 0;
+}
+.cardHome button {
+    margin: 17px;
 }

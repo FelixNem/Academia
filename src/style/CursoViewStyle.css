@@ -1,0 +1,130 @@
+.cursoSection {
+    background-color: blue;
+    box-sizing: border-box;
+    color: aliceblue;
+    height: 100vh;
+    padding: 25px;
+}
+
+.cursoinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cursoSection span {
+    font-size: 1.2rem;
+    margin-bottom: -75px;
+}
+
+.clase {
+    margin-top: 7%;
+    font-size: 1.5rem;
+    height: 50%;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    
+}
+
+.claseText {
+    width: 60%;
+}
+
+.bigFont {
+    color: gold;
+}
+
+.bigNumber {
+    color: gold;
+    font-size: 3.5rem;
+}
+
+.claseGratis {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.claseHeader {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.zoomImg {
+    width: 75%;
+}
+
+.cursoCosto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.cursoDias {
+    font-size: 4rem;
+}
+
+.temario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.temarioCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.temarioText {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.temarioImg {
+    width: 50%;
+    height: 100vh;
+}
+
+.temarioImg img {
+    width: 80%;
+}
+
+.profesores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.profeCard {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    font-size: 1.5rem;
+}
+
+.profeNombre {
+    color: gold;
+    font-size: 2.5rem;
+}
+
+.fotoProfe {
+    width: 100%;
+    height: 300px;
+}

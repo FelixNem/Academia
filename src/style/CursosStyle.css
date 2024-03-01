@@ -1,18 +1,30 @@
 .cursos {
-    display: flex;
-    flex-direction:column;
-
     padding: 40px;
-
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 
     background-image: url('https://observatorio.tec.mx/wp-content/uploads/2022/05/bigstock-Top-View-Of-Young-Students-Wit-204873577.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
-.mensaje{
-    font-size: 1.2rem;
-    color: white;
+.cursosText {
+    height: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.cursosHeader {
+    margin-top: 65px;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: gold;
+    width: 25%;
+    padding: 13px;
+    border-radius: 17px;
+    text-align: center;
 }

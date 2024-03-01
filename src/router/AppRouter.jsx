@@ -2,7 +2,7 @@ import {
 	createBrowserRouter
   } from "react-router-dom";
 
-import { Bienvenido, Contacto, Cursos, Vacante } from '../pages'
+import { Bienvenido, Contacto, CursoView, Cursos, Nosotros, Vacante } from '../pages'
 import { Navbar } from "../components";
 
 export const routerAcademia = createBrowserRouter([
@@ -25,6 +25,13 @@ export const routerAcademia = createBrowserRouter([
 		</>
 	},
 	{
+		path: 'nosotros',
+		element: <>
+			<Navbar />
+			<Nosotros />
+		</>,
+	},
+	{
 		path: 'contacto',
 		element: <>
 			<Navbar/>
@@ -32,10 +39,17 @@ export const routerAcademia = createBrowserRouter([
 		</>
 	},
 	{
-		path: 'vacante',
+		path: 'nosotros/vacantes',
 		element: <>
 			<Navbar/>
 			<Vacante />
+		</>
+	}, 
+	{
+		path: 'cursos/:cursoName',
+		element: <>
+			<Navbar/>
+			<CursoView/>
 		</>
 	}
 ])
