@@ -1,35 +1,257 @@
-/* Carrusel de Cursos */
-.cursosCarrusel {
-    height: 68%;
+.cursos {
+    padding: 40px;
+    /*height: 100vh;
+    min-height: 100vh;*/
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-image: url('../assets/img/fondo.jpeg');
+    background-size: cover; /* Ajustar y cubrir toda la sección */
+    background-repeat: no-repeat;
+}
+
+.cursosText {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-left: 1.4%;
+    margin-bottom: 1.8%;
+    height: 40%; /* Ajustado el porcentaje de altura para que el texto tenga más espacio */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    padding-left: 20px; /* Añadido un relleno a la izquierda para separar el texto del borde */
+    font-size: 1.9rem;
+    color: #ffffff; /* Cambiado el color del texto para mejorar la legibilidad */
+    /*background-color: #ff35ff;*/
+}
+
+.divCursoHeader {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: 1.4%;
+}
+
+.cursosHeader {
+    display: inline-block; /* Cambiado a inline-block */
+    font-size: 3.2rem;
+    color: #ffffff; 
+    padding: 10px 20px; /* Ajustando el padding para mejorar la estética */
+    border-bottom: 10px solid yellow; /* Cambiado el grosor a 4px y el color a amarillo */
+    text-align: center;
+    /*background-color: aqua;*/
+    white-space: nowrap; /* Evitar saltos de línea */
+}
+
+
+
+/* Estilos base */
+.cursosCarrusel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    opacity: 0; /* Comenzar con opacidad 0 para la animación */
+    animation: fadeIn 2s ease forwards; /* Animación de entrada */
+    /*background-color: #6f09c8;*/
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Mover hacia abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Volver a la posición original */
+    }
 }
 
 .cursoCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    width: 30%;
-    background-color: aliceblue;
-    text-align: center;
-    border-radius: 15%;
+    padding: 25px; /* Aumentar el espacio interno */
+    width: 100%; /* Ancho inicial */
+    background-color: #f7f7f7; /* Cambiar el color de fondo */
+    border-radius: 15px; /* Redondear los bordes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.cursoCard:hover {
+    transform: translateY(-15px); /* Efecto de levantar la tarjeta al pasar el ratón */
 }
 
 .cursoCard h2 {
-    margin-bottom: 15px;
+    font-weight: bold; /* Aplicar negrita */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+    font-size: 1.2rem; /* Tamaño de fuente del título */
+}
+
+.cursoCard p {
+    margin-bottom: 10px; /* Espaciado inferior para el texto */
 }
 
 .cursoCard img {
-    width: 60%;
-    height: 50%;
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    max-height: 200px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajustar la imagen sin deformarla */
+    border-radius: 15px 15px 0 0; /* Redondear los bordes superiores de la imagen */
 }
 
 .cursoCard button {
-    font-size: 1.2rem;
-    padding: 7px;
-    margin-top: 15px;
-    width: 40%;
+    font-size: 1rem; /* Tamaño de fuente */
+    padding: 8px 15px; /* Espaciado interno del botón */
+    background-color: #6f09c8; /* Cambiar el color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Eliminar borde del botón */
+    border-radius: 8px; /* Redondear los bordes del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.cursoCard button:hover {
+    background: linear-gradient(120deg,#1532b5,#ff35ff); /* Definir un degradado azul a rosa */
+}
+
+.p-descripcion {
+    margin-top: 10px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #333; /* Color de texto oscuro */
+}
+
+
+
+
+
+/* hacer la página responsive */
+
+@media only screen and (min-width: 2561px) {
+    .cursoCard {
+        width: 20%; /* Ancho de tarjeta en pantalla grande */
+    }
+    .divCursoHeader {
+        margin-top: 8%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: rgb(255, 115, 0);*/
+    }   
+    .cursosText {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre las tarjetas */
+        margin-top: 40px;
+        margin-left: 1.4%;
+        margin-bottom: 1.8%;
+        height: 40%; /* Ajustado el porcentaje de altura para que el texto tenga más espacio */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
+        padding-left: 20px; /* Añadido un relleno a la izquierda para separar el texto del borde */
+        font-size: 2rem;
+        color: #f4f4f4; /* Cambiado el color del texto para mejorar la legibilidad */
+        /*background-color: #ff35ff;*/
+    }
+}
+
+@media only screen and (max-width: 2560px) {
+    .cursoCard {
+        width: 23%; /* Ancho de tarjeta en pantalla grande */
+    }
+    .divCursoHeader {
+        margin-top: 7%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: rgb(255, 0, 0);*/
+    }   
+    .cursosText {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre las tarjetas */
+        margin-top: 40px;
+        margin-left: 1.4%;
+        margin-bottom: 1.8%;
+        height: 40%; /* Ajustado el porcentaje de altura para que el texto tenga más espacio */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
+        padding-left: 20px; /* Añadido un relleno a la izquierda para separar el texto del borde */
+        font-size: 1.9rem;
+        color: #f4f4f4; /* Cambiado el color del texto para mejorar la legibilidad */
+        /*background-color: #ff35ff;*/
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    .cursoCard {
+        width: 20%; /* Ancho de tarjeta en pantalla grande */
+    }
+    .divCursoHeader {
+        margin-top: 6%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: aqua;*/
+    }   
+}
+
+/* Media queries para hacer la página responsive */
+@media only screen and (max-width: 1050px) {
+    .cursoCard {
+        width: 45%; /* Ancho de tarjeta en pantalla grande */
+    }
+    .divCursoHeader {
+        margin-top: 16%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: rgb(179, 255, 37);*/
+    }   
+    .cursosCarrusel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* Espacio entre las tarjetas */
+        opacity: 0; /* Comenzar con opacidad 0 para la animación */
+        animation: fadeIn 2s ease forwards; /* Animación de entrada */
+        /*background-color: #6f09c8;*/
+    }
+}
+
+
+/* Media queries para hacer la página responsive */
+@media only screen and (max-width: 750px) {
+    .cursoCard {
+        width: 70%; /* Ancho de tarjeta en pantalla grande */
+    }
+    .divCursoHeader {
+        margin-top: 19%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: rgb(244, 37, 255);*/
+    }   
+    .cursosCarrusel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* Espacio entre las tarjetas */
+        opacity: 0; /* Comenzar con opacidad 0 para la animación */
+        animation: fadeIn 2s ease forwards; /* Animación de entrada */
+        /*background-color: #6f09c8;*/
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cursoCard {
+        width: 100%; /* Ancho de tarjeta en dispositivos móviles */
+    }
+    .divCursoHeader {
+        margin-top: 19%; /* Cambiar el margen para pantallas mayores a 1200px */
+        /*background-color: rgb(229, 255, 0);*/
+    }   
+    .cursosCarrusel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* Espacio entre las tarjetas */
+        opacity: 0; /* Comenzar con opacidad 0 para la animación */
+        animation: fadeIn 2s ease forwards; /* Animación de entrada */
+        /*background-color: #6f09c8;*/
+    }
 }

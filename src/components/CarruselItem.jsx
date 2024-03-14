@@ -16,10 +16,10 @@ export const CarruselItem = ({
   return (
     <div className='cursoCard'>
         <h2>{ curso }</h2>
-        <p>{ desc }</p>
         <img src={`${img}`} alt='imagen del curso' />
-        <button className='btn btn-primary' onClick={onClick} >
-            Saber Más
+        <p className='p-descripcion'>{ desc }</p>
+        <button className='btn-card' onClick={onClick} >
+            Más información
         </button>
     </div>
   )

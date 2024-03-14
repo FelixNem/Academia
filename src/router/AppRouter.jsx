@@ -2,8 +2,8 @@ import {
 	createBrowserRouter
   } from "react-router-dom";
 
-import { Bienvenido, Contacto, CursoView, Cursos, Nosotros, Vacante } from '../pages'
-import { Navbar } from "../components";
+import { Bienvenido, Contacto, Cursos, CursoView, MuchoTexto, Nosotros, Vacante } from '../pages'
+import { Navbar, Footer } from "../components";
 
 export const routerAcademia = createBrowserRouter([
 	{
@@ -11,10 +11,12 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar />
 			<Bienvenido/>
+			<Footer />
 		</>,
 		errorElement: <>
 		<Navbar />
 		<Bienvenido/>
+		<Footer />
 	</>,
 	},
 	{
@@ -22,6 +24,7 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar/>
 			<Cursos/>
+			<Footer />
 		</>
 	},
 	{
@@ -29,6 +32,7 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar />
 			<Nosotros />
+			<Footer />
 		</>,
 	},
 	{
@@ -36,6 +40,14 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar/>
 			<Contacto/>
+			<Footer />
+		</>
+	},
+	{
+		path: 'legal',
+		element: <>
+			<Navbar/>
+			<MuchoTexto />
 		</>
 	},
 	{
@@ -43,6 +55,7 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar/>
 			<Vacante />
+			<Footer />
 		</>
 	}, 
 	{
@@ -50,6 +63,7 @@ export const routerAcademia = createBrowserRouter([
 		element: <>
 			<Navbar/>
 			<CursoView/>
+			<Footer />
 		</>
 	}
 ])

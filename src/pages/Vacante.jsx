@@ -1,4 +1,5 @@
-import { useForm } from '../hook'
+import { useRef } from "react";
+import { useForm } from '../hook';
 
 import '../style/VacanteStyle.css'
 
@@ -12,13 +13,28 @@ const formValidations = {
 
 
 export const Vacante = () => {
-    const {
+  const api_key = 're_EcYtgEiU_976W1Usen3LWdmXijrZUALJA';
+
+  const form = useRef();
+  
+  const {
 		messague,
 		onInputChange,
 		onResetForm,
 		isFormValid,
 		messagueValid,
 	} = useForm(formVacante, formValidations);
+
+  const sendEmail = () => {
+    const resend = new Resend(api_key);
+
+    resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'aguiladfuego@gmail.com',
+      subject: 'Hello World',
+      html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+    });
+  }
 
 	const onSubmit = e => {
 		e.preventDefault();
@@ -28,9 +44,7 @@ export const Vacante = () => {
             return;
         };
 
-    console.log({
-      messague
-    })
+    sendEmail()
 
 		onResetForm();
 	};
@@ -41,7 +55,7 @@ export const Vacante = () => {
                 <h2>¿Quieres formar parte del equipo?</h2>
             </div>
             <div className='mensajeVac' >
-                <p>Ponte en contacto con nosotros enviendones un correo para más información</p>
+                <p>Ponte en contacto con nosotros enviandonos un correo para más información</p>
 
                 <div className="cajaRedVac" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
@@ -59,7 +73,7 @@ export const Vacante = () => {
 
             <div className='formularioVac' >
 
-            <form >
+            <form ref={form} onSubmit={onSubmit}>
               <div className="mb-3">
                 <textarea
                   id="inputComplaint"
@@ -71,7 +85,7 @@ export const Vacante = () => {
 							    onChange={onInputChange}
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-warning" onClick={ onSubmit } >Enviar</button>
+              <button type="submit" className="btn btn-warning">Enviar</button>
             </form>
           </div>
 

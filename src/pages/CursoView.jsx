@@ -3,37 +3,45 @@ import { getCursoByName } from '../utils/getCursoByName';
 
 import '../style/CursoViewStyle.css'
 
+
+
 export const CursoView = () => {
     const { cursoName } = useParams();
 
     const curso = getCursoByName( cursoName )
     if (!curso) {
-      return <Navigate to={'/cursos'} />;
+      return <Navigate to={'/cursos'}/>;
     }
 
-    const { titulo, descLg, temario, costos, profesores } = curso;
+    const {titulo,publicoDirigido1,publicoDirigido2,queAprendera, descLg, temario, video, costos, profesores} = curso;
 
     // imagenes
     const zoomLogo = 'https://1000logos.net/wp-content/uploads/2021/06/Zoom-emblem.png';
-    const aulaImg = 'https://www.educalinkapp.com/blog/wp-content/uploads/2021/07/reglas-del-salon-de-clase-0-138539227_m.jpg';
+    <div className='video-container'>
+
+      {/* Esta mamada no hace nada */}
+        {/* <video autoPlay muted controls>
+        <source src="../src/assets/img/Prueba.mp4" type="video/mp4"/>    
+          
+        </video> */}
+      </div>
+
 
   return (
     <section>
       <div className='cursoSection cursoinfo' >
         <div className='clase' >
           <div className='claseText' >
-            <p className='claseHeader bigFont' >{ titulo }</p>
+            <p className='claseHeader bigFont' >{titulo}</p>
             <p>{ descLg }</p>
           </div>
 
           <div className='claseGratis' >
-            <p className='claseHeader' >Clases Online</p>
-            <img className='zoomImg' src={zoomLogo} alt='logo Zoom'/>
-            <p> Te ofrecemos una clase gratis de prueba </p>
+            <img className='bannerImg' src={zoomLogo} alt='banner'/>
           </div>
         </div>
 
-        <span>Costos desde</span>
+        <p className='span-costos'>Costos desde</p>
         <div className='cursoCosto' >
           {
             costos.map(({precio, dias}) => (
@@ -44,43 +52,71 @@ export const CursoView = () => {
           }
         </div>
       </div>
+      
+      <div class='cursoSection cursoDirigido'>
+        <div className='cursoDirigidoCenter'>
+          <p class='dirigido'>¿A quién va dirigido este curso?</p>
+          <div class='img-curso'>
+              <div className='divDirigido1'>
+                  <img class='imgDirigido1' src={zoomLogo} alt='imgDirigido1'/>
+                  <p className='DescripcionMejorar'>Para gente que quiere mejorar</p>
+                  <p className='p-descripcion'>{ publicoDirigido1 }</p>
+              
+              </div>
+              <div className='divDirigido2'>
+                  <img class='imgDirigido1' src={zoomLogo} alt='imgDirigido1'/>
+                  <p className='DescripcionMejorar'>Diseñadores y profesionales de otros sectores</p>
+                  <p className='p-descripcion'>{ publicoDirigido2 }</p>
+                 
+              </div>
+              
+          </div>
+        </div>
+      </div>
+
+      
+
       <div className='cursoSection temario'>
         <div className='temarioCenter temarioText' >
-          <div className='textCenter' >
-            <p className='claseHeader bigFont' >Online</p>
-            <p>La flexibilidad de estudiar a tu propio ritmo, donde<br/>
-              quieras y cuando quieras, redefine completamente el<br/>
-              paradigma educativo</p>
-          </div>
-
-          <div>
-            <p className='claseHeader bigFont' >Temario</p>
-            <ul>
+          <div className='textCenter'>
+            <p className='claseHeader bigFont' >¿Qué aprenderás?</p>
+            <ul class="listaAprendera">
               {
-                temario.map( tema => <li>{tema}</li> )
+                queAprendera.map( aprendera => <li>{aprendera}</li> )
               }
             </ul>
           </div>
         </div>
         <div className='temarioCenter temarioImg' >
-          <img src={aulaImg} alt='imagen de las aulas'/>
+        <div className='video-container2'>
+
+        <video autoPlay muted controls>
+<source src={video} type="video/mp4"/>    
+
+  
+</video>
+</div>
         </div>
       </div>
 
-      <div className='cursoSection' >
-        <p className='claseHeader bigFont' >Conoce a tus Profesores</p>
-        <div className='profesores' >
-          {
-            profesores.map((profe) => (
-              <div className='profeCard'>
-                <img className='fotoProfe' src={profe.foto} alt='foto del profe' />
-                <p className='profeNombre' >{profe.nombre}</p>
-                <p className='profeDesc' >{profe.desc}</p>
-              </div>
-            ))
-          }
+
+      <div className='cursoSection conoceProfesores' >
+        <div className='profesoresCenter'>      
+          <p className='claseHeader bigFontprofe' >Conoce a tus Profesores</p>
+            <div className='profesores' >
+              {
+                profesores.map((profe) => (
+                  <div className='profeCard'>
+                    <img className='fotoProfe' src={profe.foto} alt='foto del profe' />
+                    <p className='profeNombre' >{profe.nombre}</p>
+                    <p className='profeDesc' >{profe.desc}</p>
+                  </div>
+                ))
+              }
+            </div>
         </div>
       </div>
+
     </section>
   )
 }

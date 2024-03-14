@@ -1,14 +1,19 @@
-
 import { Link, NavLink } from 'react-router-dom';
 
 import '../style/NavbarStyle.css'
 
 export const Navbar = () => {
     return (
+		
 		<nav className='navbar navbar-expand-sm navbar-dark bg-dark p-2 contenedor-header'>
+			
 			<Link className='navbar-brand' to='/'>
-				Academia de Habiliadades
+				<div>
+					<img src='../src/assets/img/L.png'  />
+					Academia de Habilidades
+				</div>
 			</Link>
+
 
 			<div className='navbar-collapse'>
 				<div className='navbar-nav'>

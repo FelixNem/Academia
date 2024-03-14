@@ -1,9 +1,12 @@
 .cursoSection {
-    background-color: blue;
-    box-sizing: border-box;
-    color: aliceblue;
     height: 100vh;
-    padding: 25px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/img/Fondo4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0; /* Comenzar con opacidad 0 para la animación */
+    animation: fadeIn 1s ease forwards; /* Animación de entrada */
 }
 
 .cursoinfo {
@@ -12,32 +15,41 @@
 }
 
 .cursoSection span {
-    font-size: 1.2rem;
+    font-size: 1.78rem;
     margin-bottom: -75px;
 }
 
 .clase {
-    margin-top: 7%;
-    font-size: 1.5rem;
+    margin-top: 9%;
+    font-size: 1.8rem;
     height: 50%;
-
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    
+    margin-bottom: 50px;   
 }
 
 .claseText {
+    margin-left: 5%;
     width: 60%;
+    color: rgb(255, 255, 255);
 }
 
 .bigFont {
-    color: gold;
+    color: #F0B123;
+}
+
+.span-costos{
+    margin-left: 10%;
+    margin-top: -5%;
+    font-size: 3.5rem;
+    width: 50%;
+    color: rgb(255, 255, 255);    
+    font-weight: bold;
 }
 
 .bigNumber {
     color: gold;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
 }
 
 .claseGratis {
@@ -53,9 +65,13 @@
     font-weight: bold;
 }
 
-.zoomImg {
-    width: 75%;
+.bannerImg {
+    margin-top: 20%;
+    width: 76%;
+    border-radius: 7%; /* Esto hará que la imagen tenga forma redondeada */
+    
 }
+
 
 .cursoCosto {
     display: flex;
@@ -69,9 +85,86 @@
 }
 
 .cursoDias {
+    color: rgb(250, 250, 250);
     font-size: 4rem;
 }
 
+/* -----------SECCION 2 ------------*/
+.cursoDirigido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.cursoDirigidoCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
+}
+.dirigido{
+    margin: 0%;
+    margin-left: 2%;
+    font-size: 3.5rem;
+    width: 50%;
+    color: rgb(255, 255, 255);    
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    margin-bottom: 3%;
+}
+
+.divDirigido1{
+    font-size: 1.5rem;
+    width: 35%;
+}
+
+.divDirigido2{
+    font-size: 1.5rem;
+    width: 35%;
+}
+
+.img-curso {
+  display: flex;
+  justify-content: center;
+}
+.imgDirigido1{
+    width: 50%;
+    border-radius: 7%; /* Esto hará que la imagen tenga forma redondeada */
+    margin-bottom: 5%;
+}
+.imgDirigido2{
+    width: 50%;
+    border-radius: 7%; /* Esto hará que la imagen tenga forma redondeada */
+    margin-bottom: 5%;
+}
+.img-curso div {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.img-curso div:last-child {
+  margin-right: 0;
+}
+
+.DescripcionMejorar{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.p-descripcion {
+    font-size: 1.8rem;
+    margin: 5%;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333; /* Color de texto oscuro */
+    text-align: justify; /* Justificar el texto */
+    margin-bottom: 20px; /* Espacio inferior entre párrafos */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+  
+  
+
+/* -----------SECCION 3 ------------*/
 .temario {
     display: flex;
     flex-direction: row;
@@ -83,6 +176,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+   .image{
+background-image: url('../assets/img/azul.jpg');
+    background-repeat: no-repeat;
+  
+   }
+    
 }
 
 .temarioText {
@@ -101,30 +200,108 @@
     width: 80%;
 }
 
+.listaAprendera {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listaAprendera li {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: azure;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #333333;
+    transition: transform 0.3s ease;
+  }
+  
+  .listaAprendera li:hover {
+    transform: scale(1.05); /* Cambia el tamaño del elemento al hacer hover */
+    background-color: rgb(255, 255, 117); /* Cambia el color de fondo al hacer hover */
+  }
+  
+  
+
+
+/* -----------SECCION 4 ------------*/
+.conoceProfesores{
+    background-color: rgb(255, 255, 255);
+}
 .profesores {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin-bottom: 0;
+    flex-wrap: nowrap;    
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.profesoresCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
 }
 
 .profeCard {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 30%;
     font-size: 1.5rem;
+    margin-right: 3%;
+    margin-left: 2%;
+}
+
+.profeDesc{
+    width: 85%; /* Ancho deseado */
+}
+
+.bigFontprofe{
+    margin-top: 2%;
+    color: #333;
 }
 
 .profeNombre {
-    color: gold;
-    font-size: 2.5rem;
+    color: #333;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 3%;
 }
 
+/* Estilo para la foto del profesor */
 .fotoProfe {
-    width: 100%;
-    height: 300px;
+    margin-top: 4%;
+    width: 85%; /* Ancho deseado */
+    height: 50%; /* Alto deseado */
+    border-radius: 15px; /* Ajusta el valor según sea necesario */
+    object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+
+
+.curso2{
+    padding-top: 90px;
+    padding-left: 520px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+
+ }
+ 
+
+ .parrafo6 img {
+    width: 650px;
+    height: 650px;
+    margin-left: 5%;
+    margin-top: 10px;
+   
+}
+
+.parrafo7 img {
+    width: 650px;
+    height: 650px;
+    margin-left: 50%;
+    margin-top: -720px;
+   
 }

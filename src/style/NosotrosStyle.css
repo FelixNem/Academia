@@ -1,11 +1,11 @@
+/* Estilos generales */
 .nosotros {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     height: 100vh;
-    background-image: url('https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2017/08/22161307/bog-secretos-buena-junta-de-trabajo-1-min.png');
+    background-image: url('../assets/img/per.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -16,24 +16,35 @@
 }
 
 .somosHeader {
-    font-size: 2.5rem;
-    text-align: center;
-    color: gray;
+    font-size: 5.5rem;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
 }
 
 .somosText {
-    color: azure;
+    color: rgb(0, 0, 0);
     padding: 11%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    padding-top: 3%;
 }
 
 .somosText button {
-    margin-top: 35px;
+    margin-top: 10px;
+    margin-bottom: 100;
     font-size: 1.6rem;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 40px;
+    height: 70px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 30px;
 }
 
 .factoCajitas {
@@ -49,8 +60,89 @@
     padding: 17px;
     color: white;
     font-size: 1.3rem;
-    background-color: gold;
+    background-color: #F0B123;
     border-radius: 33px;
     width: 42%;
+    opacity: 0.86;
 }
 
+.cajita h3 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.cajita p {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1200px) {
+    .somosHeader {
+        font-size: 4rem;
+    }
+
+    .somosText {
+        font-size: 1.5rem;
+    }
+
+    .cajita {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .somosHeader {
+        font-size: 3.5rem;
+    }
+
+    .somosText {
+        font-size: 1.3rem;
+    }
+
+    .cajita {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .somosContainer {
+        width: 70%;
+    }
+
+    .somosHeader {
+        font-size: 3rem;
+    }
+
+    .cajita {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .somosContainer {
+        width: 80%;
+    }
+
+    .somosHeader {
+        font-size: 2.5rem;
+    }
+
+    .cajita {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .somosContainer {
+        width: 90%;
+    }
+
+    .somosHeader {
+        font-size: 2rem;
+    }
+
+    .cajita {
+        width: 100%;
+    }
+}

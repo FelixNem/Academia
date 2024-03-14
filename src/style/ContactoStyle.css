@@ -4,15 +4,21 @@
     align-items: center;
     margin-top: 75px;
     height: 90vh;
+    background-image: url('../assets/img/Paro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
-    width: 70%;
-    height: 75%;
+    width: 60%;
+    height: 85%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 530px;
+    opacity: 86%;
+    border-radius: 15px;
 }
 
 .titulo {
@@ -22,6 +28,7 @@
     width: 100%;
     text-align: center;
     padding: 15px;
+    border-radius: 15px 15px 0 0;
 }
 
 .cuerpo {
@@ -31,18 +38,20 @@
     width: 100%;
     height: 100%;
 
-    background-color: #0174BE;
+    background-color: #004AAD;
     color: white;
-
+    border-radius: 0 0 15px 15px;
 }
 
 .formulario {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75%;
+    width: 85%;
     height: 100%;
     border-right: solid 6px white;
+  
+    border-radius: 1px; /* Puedes ajustar este valor según tus preferencias */
 }
 
 .formulario form {
@@ -54,7 +63,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: baseline;
-    width: 40%;
+    width: 60%;
     height: 100%;
     margin-left: 35px;
 }

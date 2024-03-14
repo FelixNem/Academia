@@ -6,6 +6,18 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-image: url('../assets/img/Estudiantes.jpeg');
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+
+    background-image: url('../assets/img/Estudiantes.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+    overflow: hidden; /* Para evitar barras de desplazamiento */
+
+
 }
 
  .containerVac {
@@ -15,23 +27,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 45%;
+    margin-left: -40%; /* Ajusta el valor según tus necesidades */
+    
+    opacity: 90%; /* Ajusta el valor según tus necesidades */
 }
 
 .tituloVac {
     color: white;
+    
     font-size: 1.3rem;
     background-color: #FFC436;
     width: 100%;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
     font-weight: bolder;
+    width: 100%;
+  
+    
 }
 
 .mensajeVac {
-    padding: 20px;
+    padding: 10px;
     color: black;
     font-size: 1.7rem;
     text-align: center;
+    width: 85%;
+    
 }
 
 .cajaRedVac {
@@ -45,5 +67,31 @@
 }
 
 .formularioVac {
-    width: 85%;
+    width: 75%;
+    height: 300px; /* Ajusta el valor según tus necesidades */
+
+}
+
+
+.btn {
+    display: inline-block;
+    
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #FFC436;
+    border-radius: 5px;
+    background-color: #FFC436;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 38%;
+    
+    
+}
+
+.btn:hover {
+    background-color: white;
+    color: #FFC436;
 }

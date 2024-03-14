@@ -1,0 +1,47 @@
+.footer {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: gray;
+    color: aliceblue;
+}
+
+.importantInfo {
+    color: darkblue;
+}
+
+.linkFooter {
+    text-decoration: none;
+}
+
+.linkFooter .linkFooter:link, .linkFooter:visited, .linkFooter:active {
+    color: darkblue
+}
+
+.Redesrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Redesrow div {
+    margin-right: 17px;
+}
+
+.redesFooter {
+    align-self: baseline;
+}
+
+.redesFooter svg {
+    color: white;
+    width: 45px;
+    height: 45px;
+}
+
+.redesFooter a:link, a:visited, a:active {
+    color: white
+}
+

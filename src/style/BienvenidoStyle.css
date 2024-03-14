@@ -1,4 +1,3 @@
-
 .bienvenido {
     display: flex;
     flex-direction: row;
@@ -6,25 +5,48 @@
     justify-content: space-between;
     align-items: center;
 
-
     height: 110vh;
     padding: 25px;
 
-    background-image: url('https://www.telemundo.com/sites/nbcutelemundo/files/images/promo/article/2016/08/16/estudiante-universitaria-con-smartphone-en-biblioteca.jpg');
+    background-image: url('../assets/img/fondo.jpeg');
+   
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
-.img-facebook {
-    height: 100vh;
-}
+    .parrafo{
+        font-size: 21px;
+    }
 
-.img-facebook img {
-    height: auto;
-    width: 100%;
-}
-
+    .img-facebook {
+        height: 100vh;
+        position: relative;
+      }
+      
+      .img-facebook img {
+        height: auto;
+        width: 100%;
+      }
+      
+      .video-container {
+        position: absolute;
+        bottom: -1110px; /* Mueve el video un poco más hacia abajo */
+        right: 21%; /* Aleja el video un 10% a la derecha */
+        width: 100%;
+        max-width: 530px;
+        margin: 0 auto;
+        z-index: 1;
+        border-radius: 55px;
+      }
+      
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 19px;
+      }
+      
+      
 .escuela {
     padding: 20px;
     width: 50%;
@@ -33,11 +55,12 @@
 }
 
 .nombre {
-    font-size: 3.5rem;
+    margin-top: -90px;
+    font-size: 6.5rem;
     color: white;
 }
 .bold {
-    color: gold;
+    color: #F0B123;
 }
 
 /*Carusel y tajertas de inicio*/
@@ -58,7 +81,7 @@
     padding: 15px;
     border-radius: 7%;
     text-align: center;
-    background-color: #864AF9;
+    background-color: #ededed;
 }
 
 .cardHome img {
@@ -71,4 +94,86 @@
 }
 .cardHome button {
     margin: 17px;
+}
+
+.btn-primary {
+    background-color: #F0B123; /* Color de fondo principal */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Ajusta el espaciado interno según sea necesario */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold;
+    border-radius: 10px; /* Redondea los bordes */
+  }
+  
+  
+ .parrafo4{
+    padding-top: 90px;
+    padding-left: 80px;
+    font-weight: bold;
+    
+
+ }
+ 
+
+ .parrafos{
+    padding-top: 20px;
+    padding-left: 80px;
+ }
+
+ .parrafo3{
+    padding-top: 20px;
+    padding-left: 100px;
+    
+ }
+
+ .imagen{
+    width: 50px;
+    height: 50px; 
+ }
+
+ .factoCajitas2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    margin-top: -520px; /* Ajusta el margen superior para mover el contenedor hacia arriba */
+}
+
+/* ... (otros estilos) ... */
+
+
+
+.cajitas {
+    padding-left: 50%;
+    align-self: center;
+    margin: 21px;
+    text-align: left;
+    padding: 17px;
+    color: white;
+    font-size: 1.3rem;
+    background-color: #F0B123;
+    border-radius: 33px;
+    width: 42%;
+    opacity: 0.86;
+  
+}
+
+.cajitas h3 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    
+    
+}
+
+.cajitas p {
+    font-size: 1.7rem;
+    margin: 0;
+   
+}
+.parrafo5 img {
+    width: 650px;
+    height: 650px;
+    margin-left: 55%;
+    margin-top: 10px;
+   
 }

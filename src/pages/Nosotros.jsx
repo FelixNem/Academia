@@ -31,7 +31,7 @@ export const Nosotros = () => {
 
             <div className='cajita' >
                 <h3>100%</h3>
-                <p>De los Profesores y coordinadores son profesionales en el mercado laboral</p>
+                <p>Docentes expertos en su área</p>
             </div>
 
             <div className='cajita' >
