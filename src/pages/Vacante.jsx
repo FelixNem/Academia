@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useForm } from '../hook';
 
 import '../style/VacanteStyle.css'
@@ -11,12 +10,7 @@ const formValidations = {
 	messague: [value => value.length >= 1, 'El mensaje es obligatorio'],
 };
 
-
 export const Vacante = () => {
-  const api_key = 're_EcYtgEiU_976W1Usen3LWdmXijrZUALJA';
-
-  const form = useRef();
-  
   const {
 		messague,
 		onInputChange,
@@ -25,17 +19,6 @@ export const Vacante = () => {
 		messagueValid,
 	} = useForm(formVacante, formValidations);
 
-  const sendEmail = () => {
-    const resend = new Resend(api_key);
-
-    resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'aguiladfuego@gmail.com',
-      subject: 'Hello World',
-      html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-    });
-  }
-
 	const onSubmit = e => {
 		e.preventDefault();
 
@@ -43,8 +26,6 @@ export const Vacante = () => {
             alert( messagueValid )
             return;
         };
-
-    sendEmail()
 
 		onResetForm();
 	};
@@ -73,7 +54,7 @@ export const Vacante = () => {
 
             <div className='formularioVac' >
 
-            <form ref={form} onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
               <div className="mb-3">
                 <textarea
                   id="inputComplaint"
